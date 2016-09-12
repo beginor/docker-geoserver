@@ -5,6 +5,8 @@ MAINTAINER beginor <beginor@qq.com>
 RUN apt-get update \
     && apt-get install -y openjdk-8-jdk wget unzip
 
+ENV GEOSERVER_VERSION 2.9.1
+
 # Get GeoServer
 RUN wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/$GEOSERVER_VERSION/geoserver-$GEOSERVER_VERSION-bin.zip -O ~/geoserver.zip &&\
     unzip ~/geoserver.zip -d / && mv -v /geoserver* /geoserver && \
@@ -23,6 +25,8 @@ RUN wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/$GEOSER
 RUN apt-get remove -y wget unzip \
     && apt-get purge -y wget unzip \
     && rm -rf /var/lib/apt/lists/*
+
+ENV GEOSERVER_HOME /geoserver
 
 EXPOSE 8080
 
