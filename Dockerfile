@@ -5,7 +5,7 @@ MAINTAINER beginor <beginor@qq.com>
 RUN apt-get update \
     && apt-get install -y wget unzip
 
-ENV GEOSERVER_VERSION 2.10-RC1
+ENV GEOSERVER_VERSION 2.10.0
 
 # Get GeoServer
 RUN wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/$GEOSERVER_VERSION/geoserver-$GEOSERVER_VERSION-bin.zip -O ~/geoserver.zip &&\
