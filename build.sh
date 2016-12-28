@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t beginor/geoserver:2.10.0 .
+docker build -t beginor/geoserver:2.10.1 .
