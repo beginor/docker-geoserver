@@ -8,6 +8,8 @@ These plugins are preinstalled:
 - SqlServer plugin
 - Oracle plugin
 - CSS Styling plugin
+- YSLD Styling plugin
 - Image Pyramid plugin
+- Vector Tile plugin
 
 Add `jetty-servlets-9.2.13.v20150730.jar`, CORS enabled by default.
