@@ -5,7 +5,7 @@ MAINTAINER beginor <beginor@qq.com>
 RUN apt-get update \
     && apt-get install -y wget unzip
 
-ENV GEOSERVER_VERSION 2.11.0
+ENV GEOSERVER_VERSION 2.11.1
 
 # Get GeoServer
 RUN wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/$GEOSERVER_VERSION/geoserver-$GEOSERVER_VERSION-bin.zip -O ~/geoserver.zip &&\
@@ -58,8 +58,10 @@ RUN apt-get remove -y wget unzip \
 
 ENV GEOSERVER_HOME /geoserver
 
+ADD ./init.sh /geoserver/bin/
+
 EXPOSE 8080
 
 VOLUME ["/geoserver/data_dir","/geoserver/logs"]
 
-CMD ["/geoserver/bin/startup.sh"]
+CMD ["/bin/bash", "/geoserver/bin/init.sh"]
