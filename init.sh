@@ -3,12 +3,12 @@ GEOSERVER_HOME="/geoserver"
 
 # a function to start geoserver using its startup script.
 function start_geoserver {
-    /bin/bash ${GEOSERVER_HOME}/bin/startup.sh
+    ${GEOSERVER_HOME}/bin/startup.sh
 }
 
 # a function to stop geoserver using its shutdown script.
 function stop_geoserver {
-    /bin/bash ${GEOSERVER_HOME}/bin/shutdown.sh
+    ${GEOSERVER_HOME}/bin/shutdown.sh
 }
 
 # a function that spins, stopping every 1s to check if any geoserver
