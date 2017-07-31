@@ -1,4 +1,4 @@
-FROM beginor/openjdk:1.8.0
+FROM beginor/openjdk-jre:1.8.0_131
 
 MAINTAINER beginor <beginor@qq.com>
 
