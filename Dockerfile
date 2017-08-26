@@ -2,7 +2,7 @@ FROM beginor/openjdk-jre:1.8.0_131
 
 MAINTAINER beginor <beginor@qq.com>
 
-ENV GEOSERVER_VERSION=2.11.1 GEOSERVER_HOME=/geoserver
+ENV GEOSERVER_VERSION=2.11.2 GEOSERVER_HOME=/geoserver
 
 COPY init.sh /usr/bin/
 COPY web.xml /tmp
