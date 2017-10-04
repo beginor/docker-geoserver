@@ -34,6 +34,9 @@ RUN apt-get update && apt-get install -y wget unzip && \
     wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/$GEOSERVER_VERSION/extensions/geoserver-$GEOSERVER_VERSION-vectortiles-plugin.zip -O ~/geoserver-vectortiles-plugin.zip &&\
       unzip -o ~/geoserver-vectortiles-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/ && \
       rm ~/geoserver-vectortiles-plugin.zip && \
+    wget -c http://ares.opengeo.org/geoserver/master/community-2017-09-27/geoserver-2.12-SNAPSHOT-mbstyle-plugin.zip -O ~/geoserver-2.12-SNAPSHOT-mbstyle-plugin.zip &&\
+      unzip -o ~/geoserver-2.12-SNAPSHOT-mbstyle-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/ && \
+      rm ~/geoserver-2.12-SNAPSHOT-mbstyle-plugin.zip && \
     wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-servlets/9.2.13.v20150730/jetty-servlets-9.2.13.v20150730.jar -O ~/jetty-servlets-9.2.13.v20150730.jar &&\
       mv ~/jetty-servlets-9.2.13.v20150730.jar /geoserver/webapps/geoserver/WEB-INF/lib/ && \
     apt-get remove -y wget unzip && apt-get purge -y wget unzip && \
