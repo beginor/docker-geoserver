@@ -1,6 +1,6 @@
 FROM beginor/openjdk-jre:1.8.0_131
 
-MAINTAINER beginor <beginor@qq.com>
+LABEL maintainer="beginor <beginor@qq.com>"
 
 ENV GEOSERVER_VERSION=2.11.2 GEOSERVER_HOME=/geoserver
 
