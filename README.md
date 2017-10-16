@@ -11,5 +11,6 @@ These plugins are preinstalled:
 - YSLD Styling plugin
 - Image Pyramid plugin
 - Vector Tile plugin
+- mbstyle community plugin
 
 Add `jetty-servlets-9.2.13.v20150730.jar`, CORS enabled by default.
