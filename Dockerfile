@@ -4,12 +4,12 @@ LABEL maintainer="beginor <beginor@qq.com>"
 
 ENV GEOSERVER_HOME=/geoserver
 
-COPY init.sh /usr/bin/
+COPY docker-entrypoint.sh /usr/bin/
 COPY web.xml /tmp
 
 # GeoServer, mysql, sqlserver, oracle, css, ysld style, image pyramid, 
 # vector tiles, mbstyle, enable cors
-RUN apt-get update && apt-get install -y wget unzip && \
+RUN apt-get update && apt-get install -y wget unzip fonts-wqy-microhei fonts-wqy-zenhei ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy && \
     wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.12.0/geoserver-2.12.0-bin.zip -O ~/geoserver.zip &&\
       unzip ~/geoserver.zip -d / && mv -v /geoserver* /geoserver && \
       rm ~/geoserver.zip && \
@@ -47,4 +47,4 @@ EXPOSE 8080
 
 VOLUME ["/geoserver/data_dir","/geoserver/logs"]
 
-ENTRYPOINT /usr/bin/init.sh
+ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]
