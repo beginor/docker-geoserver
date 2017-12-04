@@ -13,4 +13,4 @@ These plugins are preinstalled:
 - Vector Tile plugin
 - mbstyle community plugin
 
-Add `jetty-servlets-9.2.13.v20150730.jar`, CORS enabled by default.
+CORS enabled by default.

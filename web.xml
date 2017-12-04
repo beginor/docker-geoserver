@@ -36,12 +36,12 @@
   
   <!--Can be true or false (defaults to: false). -->
   <!--When true the JSONP (text/javascript) output format is enabled -->
-  
+  <!--
   <context-param>
     <param-name>ENABLE_JSONP</param-name>
     <param-value>true</param-value>
   </context-param>
-  
+  -->
     <!-- 
     <context-param>
       <param-name>PROXY_BASE_URL</param-name>
@@ -84,6 +84,11 @@
     <filter>
     <filter-name>filterChainProxy</filter-name>     
      <filter-class> org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+
+    <filter>
+      <filter-name>xFrameOptionsFilter</filter-name>
+      <filter-class>org.geoserver.filters.XFrameOptionsFilter</filter-class>
     </filter>
 
    <filter>
@@ -153,6 +158,11 @@
      reasons 
      -->
    </filter>
+   <!-- Uncomment following filter to enable CORS -->
+   <filter>
+        <filter-name>cross-origin</filter-name>
+        <filter-class>org.eclipse.jetty.servlets.CrossOriginFilter</filter-class>
+    </filter>
 
     <!-- 
       THIS FILTER MUST BE THE FIRST ONE, otherwise we end up with ruined chars in the input from the GUI
@@ -162,6 +172,12 @@
     <filter-mapping>
       <filter-name>Set Character Encoding</filter-name>
       <url-pattern>/*</url-pattern>
+    </filter-mapping>
+   
+   <!-- Uncomment following filter to enable CORS -->
+    <filter-mapping>
+        <filter-name>cross-origin</filter-name>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
    
     <filter-mapping>
@@ -176,6 +192,11 @@
 
     <filter-mapping>
       <filter-name>GZIP Compression Filter</filter-name>
+      <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+      <filter-name>xFrameOptionsFilter</filter-name>
       <url-pattern>/*</url-pattern>
     </filter-mapping>
     
@@ -226,6 +247,11 @@
     <listener>
       <listener-class>org.geoserver.platform.GeoServerHttpSessionListenerProxy</listener-class>
     </listener>
+
+	<!-- request context listener for session-scoped beans -->
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
     
     <!-- spring dispatcher servlet, dispatches all incoming requests -->
     <servlet>
@@ -257,12 +283,4 @@
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
     
-    <filter>
-        <filter-name>cross-origin</filter-name>
-        <filter-class>org.eclipse.jetty.servlets.CrossOriginFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>cross-origin</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
 </web-app>

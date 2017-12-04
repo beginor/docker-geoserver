@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build --rm -t beginor/geoserver:2.12.0 .
+docker build --rm -t beginor/geoserver:2.12.1 .
