@@ -37,8 +37,6 @@ RUN apt-get update && apt-get install -y wget unzip fonts-wqy-microhei fonts-wqy
     wget -c http://ares.opengeo.org/geoserver/2.12.x/community-latest/geoserver-2.12-SNAPSHOT-mbstyle-plugin.zip -O ~/geoserver-2.12-SNAPSHOT-mbstyle-plugin.zip &&\
       unzip -o ~/geoserver-2.12-SNAPSHOT-mbstyle-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/ && \
       rm ~/geoserver-2.12-SNAPSHOT-mbstyle-plugin.zip && \
-    wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-servlets/9.2.13.v20150730/jetty-servlets-9.2.13.v20150730.jar -O ~/jetty-servlets-9.2.13.v20150730.jar &&\
-      mv ~/jetty-servlets-9.2.13.v20150730.jar /geoserver/webapps/geoserver/WEB-INF/lib/ && \
     apt-get remove -y wget unzip && apt-get purge -y wget unzip && \
       rm -rf /var/lib/apt/lists/* && \
     mv /tmp/web.xml /geoserver/webapps/geoserver/WEB-INF/web.xml
