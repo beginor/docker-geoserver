@@ -7,9 +7,9 @@ ENV GEOSERVER_HOME=/geoserver
 COPY docker-entrypoint.sh /usr/bin/
 COPY web.xml /tmp
 
-# GeoServer, mysql, sqlserver, oracle, css, ysld style, image pyramid, 
+# GeoServer, mysql, sqlserver, oracle, css, ysld style, image pyramid,
 # vector tiles, mbstyle, enable cors
-RUN apt-get update && apt-get install -y wget unzip fonts-wqy-microhei fonts-wqy-zenhei ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy && \
+RUN apt-get update && apt-get install -y curl wget unzip fonts-wqy-microhei fonts-wqy-zenhei ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy && \
     wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.12.2/geoserver-2.12.2-bin.zip -O ~/geoserver.zip &&\
       unzip ~/geoserver.zip -d / && mv -v /geoserver* /geoserver && \
       rm ~/geoserver.zip && \
@@ -46,3 +46,6 @@ EXPOSE 8080
 VOLUME ["/geoserver/data_dir","/geoserver/logs"]
 
 ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]
+
+HEALTHCHECK --interval=30s --timeout=30s --start-period=30s --retries=3 \
+  CMD curl "http://127.0.0.1:8080/geoserver/ows?service=wfs&version=2.0.0&request=GetCapabilities" || exit 1
