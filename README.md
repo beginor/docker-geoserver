@@ -1,4 +1,4 @@
-# GeoServer for docker
+# GeoServer in docker
 
 GeoServer is an open source server for sharing geospatial data.
 
