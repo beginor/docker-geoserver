@@ -55,8 +55,7 @@ rm ~/geoserver-2.13-SNAPSHOT-mbstyle-plugin.zip
 mv /tmp/web.xml /geoserver/webapps/geoserver/WEB-INF/web.xml
 
 # cleanup
-apt-get remove -y wget unzip
 apt-get purge -y wget unzip
-apt-get autoremove
+apt-get autoremove -y
 rm -rf /var/lib/apt/lists/*
 
