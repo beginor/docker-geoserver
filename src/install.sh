@@ -7,42 +7,42 @@ apt-get update
 apt-get install -y --no-install-recommends curl wget unzip fonts-noto-cjk openjdk-8-jre-headless
 
 # geoserver
-wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.1/geoserver-2.13.1-bin.zip -O ~/geoserver.zip
+wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.2/geoserver-2.13.2-bin.zip -O ~/geoserver.zip
 unzip ~/geoserver.zip -d / && mv -v /geoserver* /geoserver
 rm ~/geoserver.zip
 
 # geoserver-mysql-plugin
-wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.1/extensions/geoserver-2.13.1-mysql-plugin.zip -O ~/geoserver-mysql-plugin.zip
+wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.2/extensions/geoserver-2.13.2-mysql-plugin.zip -O ~/geoserver-mysql-plugin.zip
 unzip -o ~/geoserver-mysql-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
 rm ~/geoserver-mysql-plugin.zip
 
 # sqlserver-plugin
-wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.1/extensions/geoserver-2.13.1-sqlserver-plugin.zip -O ~/geoserver-sqlserver-plugin.zip
+wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.2/extensions/geoserver-2.13.2-sqlserver-plugin.zip -O ~/geoserver-sqlserver-plugin.zip
 unzip -o ~/geoserver-sqlserver-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
 rm ~/geoserver-sqlserver-plugin.zip
 
 # oracle-plugin
-wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.1/extensions/geoserver-2.13.1-oracle-plugin.zip -O ~/geoserver-oracle-plugin.zip
+wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.2/extensions/geoserver-2.13.2-oracle-plugin.zip -O ~/geoserver-oracle-plugin.zip
 unzip -o ~/geoserver-oracle-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
 rm ~/geoserver-oracle-plugin.zip
 
 # css-plugin
-wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.1/extensions/geoserver-2.13.1-css-plugin.zip -O ~/geoserver-css-plugin.zip
+wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.2/extensions/geoserver-2.13.2-css-plugin.zip -O ~/geoserver-css-plugin.zip
 unzip -o ~/geoserver-css-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
 rm ~/geoserver-css-plugin.zip
 
 # ysld-plugin
-wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.1/extensions/geoserver-2.13.1-ysld-plugin.zip -O ~/geoserver-ysld-plugin.zip
+wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.2/extensions/geoserver-2.13.2-ysld-plugin.zip -O ~/geoserver-ysld-plugin.zip
 unzip -o ~/geoserver-ysld-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
 rm ~/geoserver-ysld-plugin.zip
 
 # pyramid-plugin
-wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.1/extensions/geoserver-2.13.1-pyramid-plugin.zip -O ~/geoserver-pyramid-plugin.zip
+wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.2/extensions/geoserver-2.13.2-pyramid-plugin.zip -O ~/geoserver-pyramid-plugin.zip
 unzip -o ~/geoserver-pyramid-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
 rm ~/geoserver-pyramid-plugin.zip
 
 # vectortiles-plugin
-wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.1/extensions/geoserver-2.13.1-vectortiles-plugin.zip -O ~/geoserver-vectortiles-plugin.zip
+wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.2/extensions/geoserver-2.13.2-vectortiles-plugin.zip -O ~/geoserver-vectortiles-plugin.zip
 unzip -o ~/geoserver-vectortiles-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
 rm ~/geoserver-vectortiles-plugin.zip
 
