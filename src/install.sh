@@ -20,7 +20,12 @@ rm ~/geoserver-mysql-plugin.zip
 wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.2/extensions/geoserver-2.13.2-sqlserver-plugin.zip -O ~/geoserver-sqlserver-plugin.zip
 unzip -o ~/geoserver-sqlserver-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
 rm ~/geoserver-sqlserver-plugin.zip
-
+# sqlserver jdbc driver
+wget -c http://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/sqljdbc_6.0.8112.200_enu.tar.gz -O ~/sqljdbc_6.0.8112.200_enu.tar.gz
+cd ~ && tar -zxvf sqljdbc_6.0.8112.200_enu.tar.gz
+copy sqljdbc_6.0/enu/jre8/sqljdbc42.jar /geoserver/webapps/geoserver/WEB-INF/lib/
+rm -rf sqljdbc_6.0
+rm sqljdbc_6.0.8112.200_enu.tar.gz
 # oracle-plugin
 wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/2.13.2/extensions/geoserver-2.13.2-oracle-plugin.zip -O ~/geoserver-oracle-plugin.zip
 unzip -o ~/geoserver-oracle-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
