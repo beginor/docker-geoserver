@@ -5,7 +5,7 @@ set -e
 # update && install require packages
 apt-get update
 mkdir -p /usr/share/man/man1
-apt-get install -y --no-install-recommends curl unzip fonts-noto-cjk openjdk-8-jre-headless
+apt-get install -y --no-install-recommends curl unzip fonts-noto-cjk openjdk-8-jre-headless procps
 
 # geoserver
 curl --location --output ~/geoserver.zip http://downloads.sourceforge.net/project/geoserver/GeoServer/2.14.0/geoserver-2.14.0-bin.zip
