@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build --no-cache --rm -t beginor/geoserver:2.13.2 .
+docker build --no-cache --rm -t beginor/geoserver:2.14.0 .
