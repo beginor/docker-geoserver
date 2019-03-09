@@ -52,13 +52,6 @@ curl --location --output ~/geoserver-2.14-SNAPSHOT-mbstyle-plugin.zip http://bui
 unzip -o ~/geoserver-2.14-SNAPSHOT-mbstyle-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
 rm ~/geoserver-2.14-SNAPSHOT-mbstyle-plugin.zip
 
-# sqlserver jdbc driver
-curl --location --output ~/sqljdbc_6.0.8112.200_enu.tar.gz https://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/sqljdbc_6.0.8112.200_enu.tar.gz
-cd ~ && tar -zxvf sqljdbc_6.0.8112.200_enu.tar.gz
-cp sqljdbc_6.0/enu/jre8/sqljdbc42.jar /geoserver/webapps/geoserver/WEB-INF/lib/
-rm -rf sqljdbc_6.0
-rm sqljdbc_6.0.8112.200_enu.tar.gz
-
 # copy cors enabled web.xml
 mv /tmp/web.xml /geoserver/webapps/geoserver/WEB-INF/web.xml
 
