@@ -12,11 +12,11 @@ function stop_geoserver {
 }
 
 # a function that spins, stopping every 1s to check if any geoserver
-# processes are running. the loop terminates when no running geoserver 
+# processes are running. the loop terminates when no running geoserver
 # processesa are found.
 function wait_for_exit {
     while pgrep -f ${GEOSERVER_HOME} > /dev/null; do
-        /bin/sleep 1
+        /bin/sleep 3
     done
     echo "All GeoServer processes have stopped."
 }
