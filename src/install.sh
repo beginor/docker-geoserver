@@ -4,8 +4,9 @@ set -e
 
 # update && install require packages
 apt-get update
+apt-get upgrade -y
 mkdir -p /usr/share/man/man1
-apt-get install -y --no-install-recommends curl unzip fonts-noto-cjk openjdk-8-jre-headless procps ca-certificates
+apt-get install -y --no-install-recommends curl unzip fonts-noto-cjk openjdk-8-jre-headless procps
 
 # geoserver
 curl --location --output ~/geoserver-2.15.0.zip \
@@ -65,6 +66,6 @@ rm ~/geoserver-2.15-SNAPSHOT-mbstyle-plugin.zip
 mv /tmp/web.xml /geoserver/webapps/geoserver/WEB-INF/web.xml
 
 # cleanup
-apt-get purge -y unzip ca-certificates
+apt-get purge -y unzip
 apt-get autoremove -y
 rm -rf /var/lib/apt/lists/*
