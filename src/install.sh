@@ -4,7 +4,7 @@
 apt-get update
 apt-get upgrade -y
 mkdir -p /usr/share/man/man1
-apt-get install -y --no-install-recommends curl unzip fonts-noto-cjk openjdk-8-jre-headless procps
+apt-get install -y --no-install-recommends curl unzip fonts-noto-cjk openjdk-11-jre-headless procps
 
 # geoserver
 curl --location --output ~/geoserver-2.16.0.zip \
