@@ -15,5 +15,5 @@ VOLUME ["/geoserver/data_dir","/geoserver/logs"]
 
 ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=30s --retries=3 \
+HEALTHCHECK --interval=60s --timeout=60s --start-period=30s --retries=3 \
   CMD curl "http://127.0.0.1:8080/geoserver/ows?service=wfs&version=2.0.0&request=GetCapabilities" || exit 1
