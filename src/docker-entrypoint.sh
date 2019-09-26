@@ -38,6 +38,9 @@ trap signal_trap SIGTERM SIGINT
 # begin the server startup process.
 start_geoserver
 
+echo "wait 3 seconds for geoserver startup"
+/bin/sleep 3
+
 echo "Listening for termination signals..."
 # loop until all geoserver processes are finished.
 wait_for_exit
