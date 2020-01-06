@@ -7,52 +7,52 @@ mkdir -p /usr/share/man/man1
 apt-get install -y --no-install-recommends curl unzip fonts-noto-cjk openjdk-11-jre-headless procps
 
 # geoserver
-curl --location --output ~/geoserver-2.16.0.zip \
-  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.0/geoserver-2.16.0-bin.zip
-unzip ~/geoserver-2.16.0.zip -d / && mv -v /geoserver-2.16.0 /geoserver
-rm ~/geoserver-2.16.0.zip
+curl --location --output ~/geoserver-2.16.1.zip \
+  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.1/geoserver-2.16.1-bin.zip
+unzip ~/geoserver-2.16.1.zip -d / && mv -v /geoserver-2.16.1 /geoserver
+rm ~/geoserver-2.16.1.zip
 
 # geoserver-mysql-plugin
-curl --location --output ~/geoserver-2.16.0-mysql-plugin.zip \
-  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.0/extensions/geoserver-2.16.0-mysql-plugin.zip
-unzip -o ~/geoserver-2.16.0-mysql-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
-rm ~/geoserver-2.16.0-mysql-plugin.zip
+curl --location --output ~/geoserver-2.16.1-mysql-plugin.zip \
+  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.1/extensions/geoserver-2.16.1-mysql-plugin.zip
+unzip -o ~/geoserver-2.16.1-mysql-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
+rm ~/geoserver-2.16.1-mysql-plugin.zip
 
 # sqlserver-plugin
-curl --location --output ~/geoserver-2.16.0-sqlserver-plugin.zip \
-  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.0/extensions/geoserver-2.16.0-sqlserver-plugin.zip
-unzip -o ~/geoserver-2.16.0-sqlserver-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
-rm ~/geoserver-2.16.0-sqlserver-plugin.zip
+curl --location --output ~/geoserver-2.16.1-sqlserver-plugin.zip \
+  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.1/extensions/geoserver-2.16.1-sqlserver-plugin.zip
+unzip -o ~/geoserver-2.16.1-sqlserver-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
+rm ~/geoserver-2.16.1-sqlserver-plugin.zip
 
 # oracle-plugin
-curl --location --output ~/geoserver-2.16.0-oracle-plugin.zip \
-  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.0/extensions/geoserver-2.16.0-oracle-plugin.zip
-unzip -o ~/geoserver-2.16.0-oracle-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
-rm ~/geoserver-2.16.0-oracle-plugin.zip
+curl --location --output ~/geoserver-2.16.1-oracle-plugin.zip \
+  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.1/extensions/geoserver-2.16.1-oracle-plugin.zip
+unzip -o ~/geoserver-2.16.1-oracle-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
+rm ~/geoserver-2.16.1-oracle-plugin.zip
 
 # css-plugin
-curl --location --output ~/geoserver-2.16.0-css-plugin.zip \
-  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.0/extensions/geoserver-2.16.0-css-plugin.zip
-unzip -o ~/geoserver-2.16.0-css-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
-rm ~/geoserver-2.16.0-css-plugin.zip
+curl --location --output ~/geoserver-2.16.1-css-plugin.zip \
+  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.1/extensions/geoserver-2.16.1-css-plugin.zip
+unzip -o ~/geoserver-2.16.1-css-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
+rm ~/geoserver-2.16.1-css-plugin.zip
 
 # ysld-plugin
-curl --location --output ~/geoserver-2.16.0-ysld-plugin.zip \
-  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.0/extensions/geoserver-2.16.0-ysld-plugin.zip
-unzip -o ~/geoserver-2.16.0-ysld-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
-rm ~/geoserver-2.16.0-ysld-plugin.zip
+curl --location --output ~/geoserver-2.16.1-ysld-plugin.zip \
+  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.1/extensions/geoserver-2.16.1-ysld-plugin.zip
+unzip -o ~/geoserver-2.16.1-ysld-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
+rm ~/geoserver-2.16.1-ysld-plugin.zip
 
 # pyramid-plugin
-curl --location --output ~/geoserver-2.16.0-pyramid-plugin.zip \
-  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.0/extensions/geoserver-2.16.0-pyramid-plugin.zip
-unzip -o ~/geoserver-2.16.0-pyramid-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
-rm ~/geoserver-2.16.0-pyramid-plugin.zip
+curl --location --output ~/geoserver-2.16.1-pyramid-plugin.zip \
+  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.1/extensions/geoserver-2.16.1-pyramid-plugin.zip
+unzip -o ~/geoserver-2.16.1-pyramid-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
+rm ~/geoserver-2.16.1-pyramid-plugin.zip
 
 # vectortiles-plugin
-curl --location --output ~/geoserver-2.16.0-vectortiles-plugin.zip \
-  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.0/extensions/geoserver-2.16.0-vectortiles-plugin.zip
-unzip -o ~/geoserver-2.16.0-vectortiles-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
-rm ~/geoserver-2.16.0-vectortiles-plugin.zip
+curl --location --output ~/geoserver-2.16.1-vectortiles-plugin.zip \
+  http://sourceforge.net/projects/geoserver/files/GeoServer/2.16.1/extensions/geoserver-2.16.1-vectortiles-plugin.zip
+unzip -o ~/geoserver-2.16.1-vectortiles-plugin.zip -d /geoserver/webapps/geoserver/WEB-INF/lib/
+rm ~/geoserver-2.16.1-vectortiles-plugin.zip
 
 # mbstyle-plugin
 curl --location --output ~/geoserver-2.16-SNAPSHOT-mbstyle-plugin.zip \
