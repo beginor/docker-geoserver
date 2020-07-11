@@ -9,7 +9,7 @@ apt-get install -y --no-install-recommends curl unzip fonts-noto-cjk openjdk-11-
 # geoserver
 curl --location --output ~/geoserver-2.17.1.zip \
   http://sourceforge.net/projects/geoserver/files/GeoServer/2.17.1/geoserver-2.17.1-bin.zip
-unzip ~/geoserver-2.17.1.zip -d / && mv -v /geoserver-2.17.1 /geoserver
+unzip ~/geoserver-2.17.1.zip -d /geoserver
 rm ~/geoserver-2.17.1.zip
 
 # geoserver-mysql-plugin
